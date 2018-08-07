@@ -38,14 +38,6 @@ class Content extends Component {
 		this.props.dispatch(browseLaunches());
 	}
 
-	renderList(data) {
-		return (
-			<ul className="content__list">
-				{data.length ? data.map((item, index) => <ListItem key={index} data={item} />) : null}
-			</ul>
-		);
-	}
-
 	onFilter = (e) => {
 		const { params } = this.state;
 		const name = e.target.name;
@@ -65,6 +57,14 @@ class Content extends Component {
 		}
 	}
 
+	renderList(data) {
+		return (
+			<ul className="content__list">
+				{data.length ? data.map((item, index) => <ListItem key={index} data={item} />) : null}
+			</ul>
+		);
+	}
+
 	render() {
 		const { launchesData } = this.state;
 
@@ -76,6 +76,10 @@ class Content extends Component {
 						<h3 className="content__list-title">Showing {launchesData.length} Missions</h3>
 						{this.renderList(launchesData)}
 					</div>
+				</div>
+				<div className="content__footer">
+					<p className="content__footer-copyright">Copyright © 2018 Space Savvy</p>
+					<span className="content__footer-back">Back to Top</span>
 				</div>
 			</section>
 		);

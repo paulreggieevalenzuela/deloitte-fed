@@ -27,14 +27,14 @@ const Filter = ({ data, onChange, onClick }) =>
 			<label className="control-label">Min Year</label>
 			<select className="form-control" disabled>
 				<option value='' disabled> --Select-- </option>
-				{data.length && data.map(d => <option key={d.flight_number} value =''>{getYear(data.launch_date_local)}</option>)}
+				<option value='any'> Any </option>
 			</select>
 		</div>
 		<div className="form-group">
 			<label className="control-label">Max Year</label>
 			<select className="form-control" disabled>
 				<option value='' disabled> --Select-- </option>
-				{data.length && data.map(d => <option key={d.flight_number} value =''>{getYear(data.launch_date_local)}</option>)}
+				<option value='any'> Any </option>
 			</select>
 		</div>
 		<button onClick={onClick} className="btn btn-apply">Apply</button>
