@@ -15,8 +15,8 @@ class Content extends Component {
 		super(props);
 
 		this.state = {
-			copyLaunchesData: {},
-			launchesData: {},
+			copyLaunchesData: [],
+			launchesData: [],
 			params: {},
 		}
 	}
@@ -48,7 +48,7 @@ class Content extends Component {
 	}
 
 	handleSubmitFilter = () => {
-		const { params, launchesData, copyLaunchesData } = this.state;
+		const { params, copyLaunchesData } = this.state;
 
 		if(!isEmpty(params)) {
 			this.setState({ launchesData: filter(copyLaunchesData, params)})

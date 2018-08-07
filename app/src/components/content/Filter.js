@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Utils
-import { getYear } from '../../utils/utils';
+// import { getYear } from '../../utils/utils';
 
 /**
 * Filter for the listing.
