@@ -1,0 +1,48 @@
+.banner {
+	background-color: rgba(0,0,0,0.5);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+	width: 100vw;
+}
+
+.banner__overlay {
+	background-color: rgba(0,0,0,0.5);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+.banner__name {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 400;
+	padding: 20px 0px 0px 20px;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.banner__title {
+	color: #fff;
+	font-size: 52px;
+	font-weight: 400;
+	text-transform: capitalize;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+	position: absolute;
+}
+
+.banner__icon {
+	cursor: pointer;
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	transition: all 0.3s ease;
+	width: 20px;
+
+	&:hover {
+	    transform: translateY(-20px);
+	}
+}

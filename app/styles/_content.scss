@@ -1,0 +1,156 @@
+.content {
+	background-color: #eaedf1;
+	height: 100vh;
+	width: 100vw;
+	padding: 2em;
+}
+
+.content__inner {
+	background-color: #fff;
+}
+
+.content__inner-filter {
+	align-items: flex-end;
+	border-bottom: 1px solid #d5d9de;
+	display: flex;
+	padding: 1em;
+}
+
+.content__list {
+
+}
+
+.list__item {
+	align-items: flex-start;
+	display: flex;
+	justify-content: space-between;
+	padding: 1em;
+}
+
+.list__item-left {
+	width: 90%;
+}
+
+.list__item-title {
+	color: #384047;
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.list__item-info {
+	color: #7b8b8e;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.list__item-right {
+	text-align: center;
+}
+
+.number {
+	color: #384047;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.number-desc {
+	color: #7b8b8e;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.list__item-tags {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2em;
+}
+
+.tags {
+	border: 1px solid #d5d9de;
+	border-radius: 3px;
+	color: #7c8a8d;
+	font-size: 14px;
+	font-weight: 400;
+	flex: 1;
+	padding: 7px 12px;
+	margin-right: 10px;
+
+	&:last-child {
+		margin-right: 0px;
+	}
+}
+
+.list__item-image {
+	background-color: rgba(0,0,0,0.7);
+	float: left;
+	height: 100px;
+	width: 100px;
+	margin-right: 1em;
+}
+
+.content__list-title {
+	color: #7b8b8e;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	padding: 1em 0;
+}
+
+
+/*
+	Fields and Buttons
+*/
+.form-group {
+	margin-right: 15px;
+	flex: 1;
+}
+
+.control-label {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.btn {
+	background-color: #1fbba6;
+	border: 0;
+    border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 600;
+	flex: 1;
+	height: 45px;
+	padding: 10px;
+	outline: 0;
+	width: 140px;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.form-control {
+	background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #555;
+	display: block;
+    font-size: 14px;
+    height: 45px;
+    line-height: 1.42857143;
+    padding: 6px 12px;
+	width: 100%;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+    
