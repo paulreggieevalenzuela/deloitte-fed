@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { convertDate, convertTime } from '../../utils/utils';
+
 /**
 * List item.
 *
@@ -10,10 +12,14 @@ import React from 'react';
 const ListItem = ({ data }) =>
 	<li className="list__item">
 		<div className="list__item-left">
-			<div className="list__item-image"></div>
+			<div className="list__item-image">
+				<img src={data.links.mission_patch} alt="Mission Thumbnail" />
+			</div>
 			<div className="list__item-desc">
-				<h3 className="list__item-title">Falcon 9 - Echostar 105</h3>
-				<p className="list__item-info">Launched 11th October 2017 at 6.53pm from Kennedy Space Center Launch Complex 39A</p>
+				<h3 className="list__item-title">{data.rocket.rocket_name} - {data.payloads[0].payload_id}</h3>
+				<p className="list__item-info">
+					Launched on {convertDate(data.launch_date_local)} at {convertTime(data.launch_date_local)} from {data.launchpad_fullname}
+				</p>
 				<div className="list__item-tags">
 					<span className="tags">Reddit Campaign</span>
 					<span className="tags">Reddit Launch</span>
@@ -24,7 +30,7 @@ const ListItem = ({ data }) =>
 			</div>
 		</div>
 		<div className="list__item-right">
-			<p className="number">#49</p>
+			<p className="number">#{data.flight_number}</p>
 			<p className="number-desc">Flight Number</p>
 		</div>
 	</li>;

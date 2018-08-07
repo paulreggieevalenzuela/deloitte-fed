@@ -28,6 +28,8 @@
 }
 
 .list__item-left {
+	align-items: flex-tart;
+	display: flex;
 	width: 90%;
 }
 
@@ -63,8 +65,8 @@
 }
 
 .list__item-tags {
-	display: flex;
-	justify-content: space-between;
+	// display: flex;
+	// justify-content: space-between;
 	margin-top: 2em;
 }
 
@@ -84,11 +86,13 @@
 }
 
 .list__item-image {
-	background-color: rgba(0,0,0,0.7);
 	float: left;
-	height: 100px;
-	width: 100px;
+	width: 90px;
 	margin-right: 1em;
+
+	img {
+		vertical-align: middle;
+	}
 }
 
 .content__list-title {

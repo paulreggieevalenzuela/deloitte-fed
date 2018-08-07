@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 // Components
 import Banner from './Banner';
-import Content from './Content';
+import Content from './content';
 
 class Home extends Component {
   render() {

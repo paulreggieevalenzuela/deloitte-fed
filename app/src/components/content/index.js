@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import find from 'lodash/find';
 
 // Filter
 import Filter from './Filter';
 import ListItem from './ListItem';
 
 // Actions
-import { browseLaunchpads, browseLaunches } from '../actions/actions';
+import { browseLaunchpads, browseLaunches } from '../../actions/actions';
 
 class Content extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	componentDidMount() {
 		this.props.dispatch(browseLaunchpads());
 		this.props.dispatch(browseLaunches());
@@ -21,7 +18,7 @@ class Content extends Component {
 	renderList(data) {
 		return (
 			<ul className="list">
-				<ListItem />
+				{data.length ? data.map((item, index) => <ListItem key={index} data={item} />) : null}
 			</ul>
 		);
 	}
@@ -29,13 +26,18 @@ class Content extends Component {
 	render() {
 		const { launchpads, launches } = this.props;
 
+		const launchesData = launches.map(d => ({
+			...d,
+			launchpad_fullname: find(launchpads, 'id': d.site_id).full_name,
+		}));
+		console.log("launches", launchesData);
 		return (
 			<section className="content">
 				<div className="content__inner">
 					<Filter />
 					<div className="content__list">
 						<h3 className="content__list-title">Showing 5 Missions</h3>
-						{this.renderList(launches)}
+						{this.renderList(launchesData)}
 					</div>
 				</div>
 			</section>
