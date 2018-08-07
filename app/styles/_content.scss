@@ -1,6 +1,6 @@
 .content {
 	background-color: #eaedf1;
-	height: 100vh;
+	height: 100%;
 	width: 100vw;
 	padding: 2em;
 }
@@ -14,10 +14,6 @@
 	border-bottom: 1px solid #d5d9de;
 	display: flex;
 	padding: 1em;
-}
-
-.content__list {
-
 }
 
 .list__item {
@@ -156,5 +152,10 @@
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+    &:disabled {
+    	background-color: #ccc;
+    	cursor: default;
+    }
 }
     

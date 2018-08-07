@@ -9,3 +9,8 @@ export function convertTime(time) {
     
     return moment(time).format('HH:MMa');
 }
+
+export function getYear(date) {
+    
+    return moment(date).format('YYYY');
+}

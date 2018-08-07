@@ -16,7 +16,7 @@ const ListItem = ({ data }) =>
 				<img src={data.links.mission_patch} alt="Mission Thumbnail" />
 			</div>
 			<div className="list__item-desc">
-				<h3 className="list__item-title">{data.rocket.rocket_name} - {data.payloads[0].payload_id}</h3>
+				<h3 className="list__item-title">{data.rocket_name} - {data.payloads[0].payload_id}</h3>
 				<p className="list__item-info">
 					Launched on {convertDate(data.launch_date_local)} at {convertTime(data.launch_date_local)} from {data.launchpad_fullname}
 				</p>

@@ -1,5 +1,8 @@
 import React from 'react';
 
+// Utils
+import { getYear } from '../../utils/utils';
+
 /**
 * Filter for the listing.
 *
@@ -12,24 +15,26 @@ const Filter = ({ data, onChange, onClick }) =>
 	<div className="content__inner-filter">
 		<div className="form-group">
 			<label className="control-label">Keywords</label>
-			<input className="form-control" type="text" />
+			<input onChange={onChange} className="form-control" type="text" name="rocket_name" placeholder="eg Falcon" />
 		</div>
 		<div className="form-group">
 			<label className="control-label">Launch Pad</label>
-			<select onChange={onChange} className="form-control">
+			<select className="form-control" disabled>
 				<option value='' disabled> --Select-- </option>
 			</select>
 		</div>
 		<div className="form-group">
 			<label className="control-label">Min Year</label>
-			<select onChange={onChange} className="form-control">
+			<select className="form-control" disabled>
 				<option value='' disabled> --Select-- </option>
+				{data.length && data.map(d => <option key={d.flight_number} value =''>{getYear(data.launch_date_local)}</option>)}
 			</select>
 		</div>
 		<div className="form-group">
 			<label className="control-label">Max Year</label>
-			<select className="form-control">
+			<select className="form-control" disabled>
 				<option value='' disabled> --Select-- </option>
+				{data.length && data.map(d => <option key={d.flight_number} value =''>{getYear(data.launch_date_local)}</option>)}
 			</select>
 		</div>
 		<button onClick={onClick} className="btn btn-apply">Apply</button>
